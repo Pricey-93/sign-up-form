@@ -5,28 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Sign-up Form</title>
 </head>
 <body>
     <div id="left-side-container">
         <img id="odin-img" src="assets/odin-lined.png">
-        <p class="header-text">Odin</p>
+        <p id="logo-heading">Odin</p>
     </div>
     <main id="right-side-container">
-        <p class="header-text">ddascsdv</p>
-        <form>
-            <fieldset>
-
-            </fieldset>
-
-            <fieldset>
+        <p class="heading-text">This is not a real service! 
+            Yet, you can still sign up! what mysteries await?</p>
+        <form id="signup-form" action="submit" method="post">
+            <fieldset class="fields" id="name-fields">
+                <legend>Hey!, what's your name?</legend>
+                <div class="field">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name">
+                </div>
+                
+                <div class="field">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name">
+                </div>
                 
             </fieldset>
 
-            <fieldset>
+            <fieldset class="fields" id="contact-fields">
+                <legend>How can we contact you?</legend>
+                <div class="field">
+                    <label for="email">Email<span class="required-field">*</span></label>
+                    <input type="email" placeholder="Enter your email" name="email" id="email" required>
+                </div>
                 
+                <div class="field">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="number" name="phone-number" id="phone-number">
+                </div>
+            </fieldset>
+
+            <fieldset class="fields" id="password-fields">
+                <legend>Choose a strong password</legend>
+                <div class="field">
+                    <label for="password">Password<span class="required-field">*</span></label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+
+                <div class="field">
+                    <label for="confirm-password">Confirm Password<span class="required-field">*</span></label>
+                    <input type="password" name="password" id="confirm-password" required>
+                </div>
             </fieldset>
         </form>
+        <button type="submit">Create Account</button>
+        <p id="account-login-prompt">Already have an account? <a href="">Login</a></p>
     </main>
 </body>
 </html>
