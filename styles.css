@@ -1,8 +1,40 @@
-/* CSS HSL */
-:root{
---cyber-grape: hsla(269, 25%, 41%, 1);
---space-cadet: hsla(226, 42%, 22%, 1);
---dark-purple: hsla(268, 23%, 24%, 1);
---spanish-gray: hsla(270, 2%, 60%, 1);
---liberty: hsla(226, 38%, 46%, 1);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+/* CSS HSL */
+:root {
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#left-side-container {
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 35.8vw;
+    height: 100vh;
+    background-image: url(assets/night-sky.jpg);
+    background-repeat: no-repeat;
+}
+#odin-img {
+    padding: 10px;
+    height: 10vh;
+    width: 5vw;
+}
+.header-text {
+    padding: 10px;
+}
+#right-side-container {
+    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: cornflowerblue;
+}
+
