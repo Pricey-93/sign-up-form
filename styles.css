@@ -3,19 +3,32 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* CSS HSL */
-:root {
-
+html {
+    font-family: "Roboto", sans-serif;
+    color: #E1EBEE;
 }
+:root {
+    --heading-font-size: 2rem;
+    --heading-font-family: "Montserrat", sans-serif;
+    --heading-line-height: 5rem;
+    --logo-heading-font-family: "norse-bold";
+    --logo-heading-font-size: 6rem;
+    --black-text: #121212;
+    --sub-heading-font-size: 1.5rem;
+}
+@font-face {
+    font-family: "norse-bold";
+    src: url(./assets/fonts/norse-bold.otf);
+  }
 body {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
 }
 
 #left-side-container {
     float: left;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 35.8vw;
     height: 100vh;
@@ -23,18 +36,75 @@ body {
     background-repeat: no-repeat;
 }
 #odin-img {
-    padding: 10px;
-    height: 10vh;
+    min-height: 10vh;
     width: 5vw;
 }
-.header-text {
-    padding: 10px;
+#logo-heading {
+    font-family: var(--logo-heading-font-family);
+    font-size: var(--logo-heading-font-size);
+    color: var(--black-text);
 }
 #right-side-container {
+    padding: 50px;
     height: 100vh;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   background-color: cornflowerblue;
+   align-items: flex-start;
+   background: rgb(10,23,39);
+   background: linear-gradient(-180deg, rgb(10,23,39) 0%, rgba(0,6,4,1) 98%);
 }
-
+.heading-text {
+    font-size: var(--heading-font-size);
+    font-family: var(--heading-font-family);
+    line-height: var(--heading-line-height);
+}
+#signup-form {
+    padding: 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+}
+.fields {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 0px;
+}
+.field {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+legend {
+    font-size: var(--sub-heading-font-size);
+    font-weight: bold;
+    /* border-bottom: 2px solid grey; */
+}
+#name-fields > legend::after {
+    content: " 👋";
+}
+#contact-fields > legend::after {
+    content: " 📱";
+}
+#password-fields > legend::after {
+    content: " 🔑";
+}
+label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.required-field {
+    color: red;
+}
+input {
+    padding: 5px;
+}
+button {
+    color: var(--black-text);
+    padding: 12px;
+    margin: 10px 10px 10px 45px;
+}
+#account-login-prompt {
+    margin: 10px 10px 10px 45px;
+}
