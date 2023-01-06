@@ -113,7 +113,6 @@ button {
     font-weight: bold;
     background-color: var(--legend-text);
     padding: 12px;
-    /* margin: 0px 0px 0px 60px; */
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -125,7 +124,6 @@ button:hover {
   }
 #account-login-prompt {
     font-family: var(--heading-font-family);
-    /* margin: 0px 10px 0px 45px; */
 }
 #account-login-link {
     color: var(--legend-text);
@@ -135,9 +133,6 @@ button:hover {
 @media only screen and (max-width: 1112px) {
     .heading-text {
         font-size: 1.5em;
-    }
-    legend {
-        margin: 0 auto;
     }
     .fields {
         display: flex;
