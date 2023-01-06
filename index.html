@@ -26,12 +26,12 @@
                 <legend>Hey!, what's your name?</legend>
                 <div class="field">
                     <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" id="first-name">
+                    <input type="text" name="first-name" id="first-name" minlength="1" maxlength="20" placeholder="Odin">
                 </div>
                 
                 <div class="field">
                     <label for="last-name">Last Name</label>
-                    <input type="text" name="last-name" id="last-name">
+                    <input type="text" name="last-name" id="last-name" minlength="1" maxlength="20" placeholder="Odinson">
                 </div>
                 
             </fieldset>
@@ -40,12 +40,12 @@
                 <legend>How can we contact you?</legend>
                 <div class="field">
                     <label for="email">Email<span class="required-field">*</span></label>
-                    <input type="email" placeholder="Enter your email" name="email" id="email" required>
+                    <input type="email" placeholder="odin@norsemail.com" name="email" id="email" required>
                 </div>
                 
                 <div class="field">
                     <label for="phone-number">Phone Number</label>
-                    <input type="number" name="phone-number" id="phone-number">
+                    <input type="tel" name="phone-number" id="phone-number">
                 </div>
             </fieldset>
 
@@ -62,8 +62,8 @@
                 </div>
             </fieldset>
         </form>
-        <button type="submit">Create Account</button>
-        <p id="account-login-prompt">Already have an account? <a href="">Login</a></p>
+        <button type="submit" >Create Account</button>
+        <p id="account-login-prompt">Already have an account? <a id="account-login-link" href="">Login</a></p>
     </main>
 </body>
 </html>
