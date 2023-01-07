@@ -82,14 +82,14 @@ legend {
     font-size: var(--sub-heading-font-size);
     font-weight: bold;
 }
-#name-fields > legend::after {
-    content: " 👋";
+#name-fields > legend::before {
+    content: "👋 ";
 }
-#contact-fields > legend::after {
-    content: " 📱";
+#contact-fields > legend::before {
+    content: "📱 ";
 }
-#password-fields > legend::after {
-    content: " 🔑";
+#password-fields > legend::before {
+    content: "🔑 ";
 }
 label {
     text-transform: uppercase;
