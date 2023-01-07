@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 html {
     font-family: "Roboto", sans-serif;
@@ -23,22 +24,19 @@ html {
   }
 body {
     height: 100vh;
-    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
-
 #left-side-container {
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35.8vw;
-    height: 100vh;
     background-image: url(assets/night-sky.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 #odin-img {
-    min-height: 10vh;
-    width: 5vw;
+    height: 15%;
 }
 #logo-heading {
     font-family: var(--logo-heading-font-family);
@@ -47,7 +45,6 @@ body {
 }
 #right-side-container {
     padding: 50px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -69,6 +66,7 @@ body {
 .fields {
     padding: 30px;
     display: flex;
+    flex-wrap: wrap;
     border: 0;
 }
 .field {
@@ -130,17 +128,36 @@ input:focus {
     text-decoration: none;  
     margin-left: 5px;
 }
-@media only screen and (max-width: 1112px) {
-    .heading-text {
-        font-size: 1.5em;
-    }
+@media only screen and (max-width: 1450px) {
     .fields {
+        padding: 30px;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        border: 0;
+    }
+
+    legend {
+        margin: 0 auto;
+        color: var(--legend-text);
+        font-size: var(--sub-heading-font-size);
+        font-weight: bold;
+    }
+    
+}
+@media only screen and (max-width: 1016px) {
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    legend {
+        margin: 0;
     }
 }
-@media only screen and (max-width: 834px) {
-    #left-side-container {
-        display: none;
+@media only screen and (max-width: 811px) {
+    legend {
+        margin: 0 auto;
     }
 }
