@@ -13,17 +13,25 @@ function comparePasswords() {
 }
 
 // if password strings match -> value is valid, else invalid.
-function validate() {
-    let confirmPasswordField = document.getElementById("confirm-password");
-    if (comparePasswords()) {
-        confirmPasswordField.setCustomValidity("");
-    } else {
-        confirmPasswordField.setCustomValidity("passwords must match");
-    }
-    confirmPasswordField.reportValidity();
-}
+// function validate() {
+//     let confirmPasswordField = document.getElementById("confirm-password");
+//     if (comparePasswords()) {
+//         confirmPasswordField.setCustomValidity("");
+//     } else {
+//         confirmPasswordField.setCustomValidity("passwords must match");
+//     }
+//     confirmPasswordField.reportValidity();
+// }
 
 // event listeners ---------------------------------------------------------
-confirmPasswordField.addEventListener("blur", (e) => {
-    validate();
-});
+// confirmPasswordField.addEventListener("blur", (e) => {
+//     validate();
+// });
+
+function validate() {
+    if (!comparePasswords()) {
+      alert("Error: Passwords do not match.");
+      return false;
+    }
+    return true;
+  }
