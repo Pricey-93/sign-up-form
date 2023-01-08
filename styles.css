@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 html {
     font-family: "Roboto", sans-serif;
@@ -101,10 +100,13 @@ label {
 input {
     font-size: 1em;
     padding: 5px;
+    background-color: rgb(10,23,39);
+    border: 2px solid rgb(10,23,39);
+    color: #E1EBEE;
 }
 input:focus {
-    border-color: var(--legend-text);
-    outline: none;
+    outline: 0;
+    border: 2px solid  var(--legend-text);
 }
 #submit-btn {
     color: var(--black-text);
