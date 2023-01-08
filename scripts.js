@@ -33,5 +33,6 @@ function validate() {
       alert("Error: Passwords do not match.");
       return false;
     }
+    alert("Welcome to Odin");
     return true;
   }
